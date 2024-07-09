@@ -60,6 +60,12 @@ public class Principal {
                 case 6:
                     buscarTop5Livros();
                     break;
+                case 0:
+                    System.out.println("Encerrando...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
             }
         }
     }
@@ -68,7 +74,6 @@ public class Principal {
         System.out.println("Digite o título do livro: ");
         var titulo = leitura.nextLine();
         var json = consumo.obterDados(ENDERECO + "/?search=" + URLEncoder.encode(titulo));
-        System.out.println(json);
         var resposta = conversor.obterDados(json, RespostaLivro.class);
 
         try {
@@ -79,7 +84,6 @@ public class Principal {
             Autor autor;
             if (optionalAutor.isPresent()) {
                 autor = optionalAutor.get();
-                System.out.println(autor);
             } else {
                 autor = new Autor(dadosAutor);
             }
