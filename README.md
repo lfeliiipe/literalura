@@ -7,4 +7,4 @@
 
 </div>
 
-O desafio consiste de coletar dados de livros e autores através da API [Gutendex](https://gutendex.com) e praticar a persistência de dados com PostgreS e JPA.
+O desafio consiste em desenvolver uma aplicação Java Spring capaz de coletar dados de livros e autores através da API [Gutendex](https://gutendex.com) e praticar a persistência de dados com PostgreS e JPA.
